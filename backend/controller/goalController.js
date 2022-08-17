@@ -1,10 +1,14 @@
 const asyncHandler = require("express-async-handler");
 
+const Goal = require("../models/goalModel");
+
 // @desc Get goals (after we authentication it only add a specific user goal)
 // @route GET /api/goals
 // @acess Private
 const getGoals = asyncHandler(async (req, res) => {
-  res.status(200).json({ message: "Get goals" });
+  const goals = await Goal.find({});
+
+  res.status(200).json(goals);
 });
 
 // @desc Set goals
