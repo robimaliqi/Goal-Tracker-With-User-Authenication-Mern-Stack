@@ -23,7 +23,7 @@ npm run start
 
 ## How RestAPI works:
 
-![Image](./assets/images/rest-crud.png)
+![CRUD](./assets/images/rest-crud.png)
 
 _source:_(https://networkop.co.uk/blog/2016/01/01/rest-for-neteng/)
 
@@ -51,21 +51,49 @@ To delete a goal is same thing as update however you make a delete request to th
 
 ## MongoDB:
 
-Is our database, we will use mongoose to connect and interact with the database.
+A document-oriented database programme based on NoSQL.
 
 ## Express:
 
-Is a backend node.js framework.
+It’s a robust Node.js web application framework that helps in creating powerful REST APIs.
 
 ## React:
 
+A JavaScript library used to create beautiful and interactive user interfaces developed by Facebook and the community of individual developers.
+
 ## Node:
+
+It’s a JavaScript runtime environment built on Google Chrome’s V8 engine, and it compiles js at the runtime.
 
 ## Authentication:
 
 Resgister end point and Log in end point. Once we autheticate we will be able to get a json web token, we can use that token to access protective routes.
 
+**JWT (JSON Web Tokens)**
+We get a encoded token with three different parts. The first part is the header which includes the algorithm and the token type. The second part is some data in json format, you can include whatever you want in here and in our case we are going to include the user ID, it also has a issued has a timestamp which the token was issued at. The third part is a a signature which ensures the JWT hasn't been altered or tampered with in any way. This helps us when we have a route we it protects it for us, we want the user to be able to log in, which gets the token and then send the token in the headers to access that particular route.
+
+_source:_(https://jwt.io)
+
 ## Backend/Server:
+
+**Backend File Structure:**
+
+![back-file-structure](./assets/images/backend-file-structure.png)
+
+The backend consists of:
+
+- server.js
+  - Here we set up basic configuration such as database connection with Mongo server, route configuration, express configuration and other required setup.
+- routes
+  - Here each resource in our API will have a routes file.
+- models
+  - Here we define any resources we have, in this case we have a goal and the time of the goal.
+- middleware
+  - Middleware is functions that execute during the request response, in this case we tell it to throw a error message instead of the defualt express error message.
+- controller
+  - Here we create the functions for each HTTP CRUD route.
+- config/db.js
+  - We use this file to connect to MongoDB and we'll use mongoose to help with that.
 
 ## Frontend/Client:
 
@@ -75,5 +103,6 @@ Tech used is: Redux & Redux tool kit.
 
 ### Other tools used:
 
-> Postman: HTTP Client
+Postman: HTTP Client (Used to test the REST APIs)
+
 > MongoDB Atlas: Cloud Database
