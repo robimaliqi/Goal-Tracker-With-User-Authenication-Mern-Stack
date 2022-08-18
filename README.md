@@ -29,13 +29,13 @@ _source:_(https://networkop.co.uk/blog/2016/01/01/rest-for-neteng/)
 
 In the picture above the are using devices in the url, where as ours will be goals.
 
+The operations we want to do in this instance are called **CRUD (CREATE, READ, UPDATE, DELETE)**.
+
 Our **client** will be our React Application which is where all of our UI, all of our components and our state with Redux go.
 
 Our **server** we're going to build with express which is a node.js backend framework and this will be our API
 
 We need these two to communicate, we do that with a restAPI, which includes a bunch of http requests.
-
-The operations we want to do in this instance are called **CRUD (CREATE, READ, UPDATE, DELETE)**.
 
 **Create:** (HTTP POST /api/goal/payload)
 To create a goal you would make a HTTP POST request (POST IS THE METHOD). You alos send a payload of data, because if you are creating something you are going to send some data with it to the HTTP body. That then gets back a 201 status code from the server, which means everything went ok and something was created.
@@ -75,5 +75,5 @@ Tech used is: Redux & Redux tool kit.
 
 ### Other tools used:
 
-Postman: HTTP Client
-MongoDB Atlas: Cloud Database
+> Postman: HTTP Client
+> MongoDB Atlas: Cloud Database
