@@ -65,15 +65,6 @@ A JavaScript library used to create beautiful and interactive user interfaces de
 
 It’s a JavaScript runtime environment built on Google Chrome’s V8 engine, and it compiles js at the runtime.
 
-## Authentication:
-
-Resgister end point and Log in end point. Once we autheticate we will be able to get a json web token, we can use that token to access protective routes.
-
-**JWT (JSON Web Tokens)**
-We get a encoded token with three different parts. The first part is the header which includes the algorithm and the token type. The second part is some data in json format, you can include whatever you want in here and in our case we are going to include the user ID, it also has a issued has a timestamp which the token was issued at. The third part is a a signature which ensures the JWT hasn't been altered or tampered with in any way. This helps us when we have a route we it protects it for us, we want the user to be able to log in, which gets the token and then send the token in the headers to access that particular route.
-
-_source:_(https://jwt.io)
-
 ## Backend/Server:
 
 **Backend File Structure:**
@@ -87,13 +78,23 @@ The backend consists of:
 - routes
   - Here each resource in our API will have a routes file.
 - models
-  - Here we define any resources we have, in this case we have a goal and the time of the goal.
+  - Here we define any resources we have, in this case we have a users and goals, each of those have a schema where we put what fields we want users and goals to have.
 - middleware
   - Middleware is functions that execute during the request response, in this case we tell it to throw a error message instead of the defualt express error message.
 - controller
   - Here we create the functions for each HTTP CRUD route.
 - config/db.js
+
   - We use this file to connect to MongoDB and we'll use mongoose to help with that.
+
+## Authentication:
+
+Resgister end point and Log in end point. Once we autheticate we will be able to get a json web token, we can use that token to access protective routes.
+
+**JWT (JSON Web Tokens)**
+We get a encoded token with three different parts. The first part is the header which includes the algorithm and the token type. The second part is some data in json format, you can include whatever you want in here and in our case we are going to include the user ID, it also has a issued has a timestamp which the token was issued at. The third part is a a signature which ensures the JWT hasn't been altered or tampered with in any way. This helps us when we have a route we it protects it for us, we want the user to be able to log in, which gets the token and then send the token in the headers to access that particular route.
+
+_source:_(https://jwt.io)
 
 ## Frontend/Client:
 
@@ -103,6 +104,6 @@ Tech used is: Redux & Redux tool kit.
 
 ### Other tools used:
 
-Postman: HTTP Client (Used to test the REST APIs)
+> Postman: HTTP Client (Used to test the REST APIs)
 
 > MongoDB Atlas: Cloud Database
