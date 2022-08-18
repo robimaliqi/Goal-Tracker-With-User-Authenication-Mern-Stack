@@ -24,11 +24,12 @@ npm run start
 ## How RestAPI works:
 
 ![Image](./assets/images/rest-crud.png)
+
 _source:_(https://networkop.co.uk/blog/2016/01/01/rest-for-neteng/)
 
 In the picture above the are using devices in the url, where as ours will be goals.
 
-Our **client** will be our React Application which is where all of our UI, all of our components go and our state with Redux.
+Our **client** will be our React Application which is where all of our UI, all of our components and our state with Redux go.
 
 Our **server** we're going to build with express which is a node.js backend framework and this will be our API
 
