@@ -49,6 +49,8 @@ To update a goal we would use a PUT request, pretty similar to the create and re
 **Delete:** (HTTP DELETE /api/goal/1)
 To delete a goal is same thing as update however you make a delete request to the URL with the id of the goal. Also get a 200 status ok back.
 
+Please check the offical documentation I published from Postman here: https://documenter.getpostman.com/view/22498259/VUqpvJg5
+
 ## MongoDB:
 
 A document-oriented database programme based on NoSQL.
