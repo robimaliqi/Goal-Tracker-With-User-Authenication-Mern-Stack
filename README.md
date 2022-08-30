@@ -4,21 +4,14 @@ A MERN stack tutorial by Traversy Media where we will create a RESTful API from 
 
 ## How to use:
 
-Step 1:
-
 ```
 cd backend
 npm install
-npm run server
-```
-
-Step 2:
-
-```
-cd ..
+cd..
 cd frontend
 npm install
-npm run start
+cd ..
+npm run dev
 ```
 
 ## How RestAPI works:
