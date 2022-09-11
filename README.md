@@ -6,9 +6,7 @@ A MERN stack tutorial by Traversy Media where we will create a RESTful API from 
 
 ```
 git clone https://github.com/robimaliqi/Goal-Tracker-With-User-Authenication-Mern-Stack.git
-cd backend
 npm install
-cd..
 cd frontend
 npm install
 cd ..
