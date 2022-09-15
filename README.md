@@ -6,10 +6,10 @@ A MERN stack where we will create a RESTful API from scratch with Node.js, Expre
 
 ```
 git clone https://github.com/robimaliqi/Goal-Tracker-With-User-Authenication-Mern-Stack.git
-npm install
 cd frontend
 npm install
-cd ..
+cd backend
+npm install
 npm run dev
 ```
 
@@ -63,7 +63,7 @@ It’s a JavaScript runtime environment built on Google Chrome’s V8 engine, an
 
 **Backend File Structure:**
 
-![back-file-structure](./assets/images/backend-file-structure.png)
+![backend-file-structure](./assets/images/backend-file-structure.png)
 
 The backend consists of:
 
@@ -92,9 +92,13 @@ _source:_(https://jwt.io)
 
 ## Frontend/Client:
 
+**Frontend File Structure:**
+
+![frontend-file-structure](./assets/images/frontend-file-structure.png)
+
 Here we have a user interface with a register form, log in form and a dashboard where we have goals.
 
-Tech used is: Redux & Redux tool kit.
+Tech used is: React, Redux and Redux tool kit.
 
 ### Other tools used:
 
