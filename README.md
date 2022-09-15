@@ -1,6 +1,6 @@
 # Mern-Stack Goal Tracker
 
-A MERN stack tutorial by Traversy Media where we will create a RESTful API from scratch with Node.js, Express, MongoDB and Mongoose. In this web application the user will be able to register, log in, create, read, update and delete goals.
+A MERN stack where we will create a RESTful API from scratch with Node.js, Express, MongoDB and Mongoose. In this web application the user will be able to register, log in, create, read, update and delete goals.
 
 ## How to use:
 
