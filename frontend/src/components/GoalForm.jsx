@@ -13,11 +13,12 @@ function GoalForm() {
     dispatch(createGoal({ text }));
     setText("");
   };
+
   return (
     <section className="form">
       <form onSubmit={onSubmit}>
         <div className="form-group">
-          <label htmlFor="text">Goal</label>
+          <label htmlFor="text">Goals:</label>
           <input
             type="text"
             name="text"

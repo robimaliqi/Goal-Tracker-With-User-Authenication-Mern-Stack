@@ -7,7 +7,7 @@ import { register, reset } from "../features/auth/authSlice";
 import Spinner from "../components/Spinner";
 
 function Register() {
-  const [formData, setFromData] = useState({
+  const [formData, setFormData] = useState({
     name: "",
     email: "",
     password: "",
@@ -27,6 +27,7 @@ function Register() {
     if (isError) {
       toast.error(message);
     }
+
     if (isSuccess || user) {
       navigate("/");
     }
@@ -35,7 +36,7 @@ function Register() {
   }, [user, isError, isSuccess, message, navigate, dispatch]);
 
   const onChange = (e) => {
-    setFromData((prevState) => ({
+    setFormData((prevState) => ({
       ...prevState,
       [e.target.name]: e.target.value,
     }));
@@ -56,6 +57,7 @@ function Register() {
       dispatch(register(userData));
     }
   };
+
   if (isLoading) {
     return <Spinner />;
   }
@@ -74,7 +76,7 @@ function Register() {
           <div className="form-group">
             <input
               type="text"
-              className="form-conrtoll"
+              className="form-control"
               id="name"
               name="name"
               value={name}
@@ -85,7 +87,7 @@ function Register() {
           <div className="form-group">
             <input
               type="email"
-              className="form-conrtoll"
+              className="form-control"
               id="email"
               name="email"
               value={email}
@@ -96,28 +98,28 @@ function Register() {
           <div className="form-group">
             <input
               type="password"
-              className="form-conrtoll"
+              className="form-control"
               id="password"
               name="password"
               value={password}
-              placeholder="Enter your password"
+              placeholder="Enter password"
               onChange={onChange}
             />
           </div>
           <div className="form-group">
             <input
               type="password"
-              className="form-conrtoll"
+              className="form-control"
               id="password2"
               name="password2"
               value={password2}
-              placeholder="Confirm your password"
+              placeholder="Confirm password"
               onChange={onChange}
             />
           </div>
           <div className="form-group">
             <button type="submit" className="btn btn-block">
-              Register
+              Submit
             </button>
           </div>
         </form>

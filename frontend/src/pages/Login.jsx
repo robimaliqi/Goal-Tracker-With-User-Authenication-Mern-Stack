@@ -7,7 +7,7 @@ import { login, reset } from "../features/auth/authSlice";
 import Spinner from "../components/Spinner";
 
 function Login() {
-  const [formData, setFromData] = useState({
+  const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
@@ -25,6 +25,7 @@ function Login() {
     if (isError) {
       toast.error(message);
     }
+
     if (isSuccess || user) {
       navigate("/");
     }
@@ -33,7 +34,7 @@ function Login() {
   }, [user, isError, isSuccess, message, navigate, dispatch]);
 
   const onChange = (e) => {
-    setFromData((prevState) => ({
+    setFormData((prevState) => ({
       ...prevState,
       [e.target.name]: e.target.value,
     }));
@@ -53,6 +54,7 @@ function Login() {
   if (isLoading) {
     return <Spinner />;
   }
+
   return (
     <>
       <section className="heading">
@@ -67,7 +69,7 @@ function Login() {
           <div className="form-group">
             <input
               type="email"
-              className="form-conrtoll"
+              className="form-control"
               id="email"
               name="email"
               value={email}
@@ -78,17 +80,18 @@ function Login() {
           <div className="form-group">
             <input
               type="password"
-              className="form-conrtoll"
+              className="form-control"
               id="password"
               name="password"
               value={password}
-              placeholder="Enter your password"
+              placeholder="Enter password"
               onChange={onChange}
             />
           </div>
+
           <div className="form-group">
             <button type="submit" className="btn btn-block">
-              Login
+              Submit
             </button>
           </div>
         </form>
