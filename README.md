@@ -105,3 +105,5 @@ Tech used is: React, Redux and Redux tool kit.
 > Postman: HTTP Client (Used to test the REST APIs)
 
 > MongoDB Atlas: Cloud Database
+
+> Heroku
